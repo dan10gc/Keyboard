@@ -1,0 +1,39 @@
+$red    :#FF006E;
+$orange :#FF8000;
+$yellow :#F0F66E;
+$pink   :#F752B0;
+$blue   :#38F2FF;
+$purple :#8338EC;
+$grey   :#D1DEDE;
+$white  :#FFFFFF;
+$pearl  :#EBEBEB;
+$black  :#1D201F;
+
+//ui-color
+$ui-colors:(
+  text:$white,
+  background:$pink, 
+  primary:(
+    base: $pink,
+    dark: darken($pink, 20%)
+  ),
+  secondary:(
+    base: $red,
+    light: lighten($red, 10%),
+    dark: darken($red, 20%)
+  ),
+  terciary:(
+    base: $purple,
+    light: lighten($purple, 10%),
+    dark: darken($purple, 20%)
+  )
+);
+
+//map function
+@function ui-color($color-name, $color-type:null){
+  @if ($color-type != null){
+    @return map-get(map-get($ui-colors,$color-name), $color-type);
+  }@else{
+    @return map-get($ui-colors,$color-name);
+  }
+}
