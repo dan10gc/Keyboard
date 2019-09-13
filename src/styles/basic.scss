@@ -15,6 +15,16 @@ h1{
   }
 }
 
+
+.background{
+   position: fixed;
+    z-index: -1;
+    background: #000 url(~./assets/bg-repeat.jpg) repeat center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+}
 // icons
 .icon{
     margin: 2em auto;
