@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "keyboardjs": "^2.5.1",
+    "startaudiocontext": "^1.2.1",
+    "tone": "^13.8.25",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
   },
