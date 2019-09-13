@@ -32,6 +32,7 @@
 import Key from "@/components/Keys.vue";
 import Knob from "@/components/Knob.vue";
 import Tone from "@/components/Tones.vue";
+import keyboardJS from "keyboardjs";
 
 export default {
   name: "Keyboard",
@@ -39,6 +40,15 @@ export default {
     Key,
     Knob,
     Tone
+  },
+  created(){
+      keyboardJS.bind('a',function(e){
+    console.log('a is pressed');
+    //synth.triggerAttack("C4")
+  },function(e){
+    console.log('a is released');
+    //asynth.triggerRelease()ssd
+  });
   },
   data() {
     return {
